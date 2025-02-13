@@ -1,34 +1,33 @@
 # Example
 
-This is a generic React Native boilerplate
-This boilerplate acts as a template for new react-native projects
+This is a generic React Native Accelerator
+This Accelerator acts as a template for new react-native projects
 
 Developer Names:
-Divyanshu Sirsat
-Himanshu Yadav
+
 Meghna Malhotra
 
 ## Usage
 
-npx react-native init SomeProject --template https://github.com/meghnamalhotra/reactnativeboilerplate-master.git
+npx react-native init SomeProject --template https://github.com/meghnamalhotra/react-native-app-template.git
 
-This will create a new react-native project named "SomeProject" with all the files, folders and dependencies from boilerplate
+This will create a new react-native project named "SomeProject" with all the files, folders and dependencies from the accelerator
 
 ## Key Features
 
-The boiler plate consists of following:
+The template project consists of following:
 
 - Folder structure
 - Network Manager to manage API calls
 - SafeArea and Network Status React context to access safeArea insets and connection status anywhere in the component tree
 - React Components are functional components to get advantage of React Hooks
-- A custom Touchable component(SGTouchable) which have the provision to check the connection status before calling the onPress function
+- A custom Touchable component which have the provision to check the connection status before calling the onPress function
 - A HOC(Wrapper Component) will be used for App screen to provide SafeAreaInsets, Connection Status and Loader functionality
 - Utility files to work on i.e. Moment Util, Logger Util, Async Util
 - Navigational setup- react-native-gesture-handler, react-native-reanimated, react-native-screens
   @react-navigation/native, @react-navigation/native-stack, "@react-navigation/bottom-tabs are the libraries providing
   the same. The route file is NavigationRoutes.js
-- Basic Navigators(Stack, Tab and Drawer along with there screenOptions inside navigationRoutes folder
+- Basic Navigators Stack, Tab and Drawer along with there screenOptions inside navigationRoutes folder
 - Redux setup - Redux thunk as middleware and Redux persist for persistence
 - Flipper(Debugging tool) enabled and plugins for async storage and redux logger
 - Environment setup(DEV, QA, UAT and PROD)
