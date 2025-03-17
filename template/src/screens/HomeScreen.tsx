@@ -4,6 +4,7 @@ import {View, Text, Button, StyleSheet, FlatList, SafeAreaView} from 'react-nati
 import {fetchCountriesRequest} from '../redux/slices/homeSlice';
 import {RootState, AppDispatch} from '../store/store';
 import ImageComponent from '../components/ImageComponent';
+import NativeToastModule from '../customModules/specs/NativeToastModule';
 
 interface Country {
   cca3: string;
@@ -45,6 +46,7 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
   );
 
   useEffect(() => {
+    NativeToastModule.showToast('Hello World');
     dispatch(fetchCountriesRequest());
   }, [dispatch]);
 
@@ -55,8 +57,8 @@ const HomeScreen = ({navigation}: {navigation: any}) => {
         title="Go to Profile"
         onPress={() => navigation.navigate('Profile')}
       />
-
-      {!!countries && !!countries.length && <CountryComponent countries = {countries} />}
+      {loading && <Text style={styles.loader}>Loading...</Text>}
+      {!!(countries && countries.length) && <CountryComponent countries = {countries} />}
     </SafeAreaView>
   );
 };

@@ -9,6 +9,14 @@
     "start": "react-native start",
     "test": "jest"
   },
+  "codegenConfig": {
+    "name": "NativeToastModuleSpec",
+    "type": "modules",
+    "jsSrcsDir": "./src/customModules/specs", 
+    "android": {
+      "javaPackageName": "com.projectname"
+    }
+  },
   "dependencies": {
     "@react-native-community/netinfo": "^11.4.1",
     "@react-navigation/bottom-tabs": "^7.2.0",
@@ -23,6 +31,7 @@
     "react-native-reanimated": "^3.16.7",
     "react-native-safe-area-context": "^5.2.0",
     "react-native-screens": "^4.6.0",
+    "react-native-splash-view": "^0.0.9",
     "react-native-vector-icons": "^10.2.0",
     "react-redux": "^9.2.0",
     "redux": "^5.0.1",

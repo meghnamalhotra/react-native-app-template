@@ -1,6 +1,8 @@
 package com.projectname
 
+import android.os.Bundle
 import com.facebook.react.ReactActivity
+import com.splashview.SplashView
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnabled
 import com.facebook.react.defaults.DefaultReactActivityDelegate
@@ -11,6 +13,12 @@ class MainActivity : ReactActivity() {
    * Returns the name of the main component registered from JavaScript. This is used to schedule
    * rendering of the component.
    */
+
+  override fun onCreate(savedInstanceState: Bundle?) {
+        SplashView.showSplashView(this) // Show the splash screen
+        super.onCreate(savedInstanceState)
+    }
+    
   override fun getMainComponentName(): String = "ProjectName"
 
   /**
